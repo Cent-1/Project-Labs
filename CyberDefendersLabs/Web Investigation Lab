@@ -1,0 +1,41 @@
+# Web Investigation - CyberDefenders Lab
+
+## Overview
+This lab involved analyzing web server traffic to investigate a SQL injection attack. The attacker exploited a vulnerable PHP script to exfiltrate database data and upload a malicious web shell. PCAP analysis was performed to extract the full timeline and attacker techniques.
+
+[View Full Write-Up with Screenshots](https://share.note.sx/aj4a7ftm#10z3wiTI2ziKyWv57Ip34k7CLgDxHat1TO8g+YWeeJU)  
+
+
+---
+
+## Summary Table
+
+| Question                                               | Answer                                                                                                           |
+|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| Attacker IP                                            | `111.224.250.131`                                                                                                |
+| Origin City of Attacker                                | `Shijiazhuang`                                                                                                   |
+| Vulnerable PHP Script                                  | `search.php`                                                                                                     |
+| First SQL Injection URI                                | `/search.php?search=book%20and%201=1;%20--%20-`                                                                  |
+| URI Used to List Databases (Decoded)                   | `/search.php?search=book' UNION ALL SELECT NULL,CONCAT(...) FROM INFORMATION_SCHEMA.SCHEMATA-- -`               |
+| Table Name Containing User Data                        | `customers`                                                                                                      |
+| Discovered Hidden Directory                            | `/admin/`                                                                                                        |
+| Credentials Used for Login                             | `admin:admin123!`                                                                                                |
+| Malicious Script Uploaded                              | `NVri2vhp.php`                                                                                                   |
+
+---
+
+## Tools Used
+- Wireshark
+- VirusTotal
+- IP Geolocation Tools
+
+---
+
+## Notes
+- SQL injection activity detected through `search.php` URI manipulation
+- POST packets and stream inspection revealed credentials and web shell upload
+- HTTP filters like `http contains "INFORMATION_SCHEMA"` and `http contains "bookworld_db"` helped isolate key traffic
+
+---
+
+**Tags:** `#PCAP #WebForensics #SQLInjection #CyberDefenders #Wireshark #BlueTeam`
