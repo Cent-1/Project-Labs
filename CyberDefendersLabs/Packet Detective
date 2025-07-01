@@ -1,0 +1,40 @@
+# Packet Detective - CyberDefenders Lab
+
+## Overview
+This lab involved analyzing a PCAP file related to suspicious SMB activity from a compromised host. You investigated potential lateral movement, log tampering, and the use of remote execution tools by identifying IOCs and attacker behavior within the captured traffic.
+
+[View Full Write-Up with Screenshots](https://share.note.sx/015iuizb#LVAtGuhpfD8c2OKsFLAPf52tBt/0k8bo4cQt1eBLRg8)  
+
+---
+
+## ✅ Summary Table
+
+| Question                                                          | Answer                  |
+|-------------------------------------------------------------------|-------------------------|
+| Total SMB Protocol Bytes                                          | `4406`                  |
+| SMB Authentication Username                                       | `Administrator`         |
+| File Accessed by Attacker                                         | `eventlog`              |
+| Timestamp of Event Log Clearing                                   | `2020-09-23 16:50:16`   |
+| Service Using Named Pipe                                          | `ATSVC`                 |
+| Duration of Communication (172.16.66.1 ↔ 172.16.66.36)            | `11.7247`               |
+| Non-Standard Username Used                                        | `backdoor`              |
+| Executable Used for Remote Execution                              | `PSEXESVC.exe`          |
+
+---
+
+## Tools Used
+- Wireshark 
+- Manual packet inspection
+
+
+---
+
+## Notes
+- SMB Create Request packets helped uncover accessed files and execution behavior
+- Named pipes and RPC traffic revealed lateral movement
+- Time analysis confirmed log tampering and session duration
+
+
+---
+
+**Tags:** `#PCAP #SMB #Wireshark #CyberDefenders #PsExec #BlueTeam`
