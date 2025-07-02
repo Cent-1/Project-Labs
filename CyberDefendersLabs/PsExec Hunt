@@ -1,0 +1,37 @@
+#  PsExec Hunt - CyberDefenders Lab
+
+## Overview
+An IDS alert flagged suspicious lateral movement involving PsExec. This lab involved analyzing a PCAP to trace the attacker's entry point, target hosts, service installation method, and lateral movement tactics across the network using PsExec.
+
+[View Full Write-Up with Screenshots](https://share.note.sx/lh19v2a9#H/nnRz159j+AcmL6XfaOqZhmR8wG0nWKWbaZpFpWMhE)  
+
+
+---
+
+## Summary Table
+
+| Question                                                            | Answer       |
+|---------------------------------------------------------------------|--------------|
+| Attacker's Entry Point IP                                           | `10.0.0.130` |
+| First Pivot Hostname                                                | `Sales-Pc`   |
+| Username Used for Authentication                                    | `ssales`     |
+| Service Executable Used                                             | `PSEXESVC`   |
+| Network Share Used to Install Service                               | `ADMIN$`     |
+| Network Share Used for Communication                                | `IPC$`       |
+| Second Pivot Hostname                                               | `Marketing-Pc` |
+
+---
+
+## Tools Used
+- Wireshark
+
+---
+
+## Notes
+- Detected PsExec behavior via service creation and SMB file transfers
+- Hostnames extracted by following TCP auth streams
+- ADMIN$ and IPC$ shares confirmed typical PsExec lateral movement patterns
+
+---
+
+**Tags:** `#PsExec #LateralMovement #PCAP #CyberDefenders #BlueTeam #SMB #Wireshark`
