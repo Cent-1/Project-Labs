@@ -1,0 +1,40 @@
+# XMLRAT 
+
+## Overview
+A compromised host was detected generating suspicious traffic. This lab focused on dissecting a PCAP to identify the malware delivery method, understand post-compromise activity, extract hashes, and detect LOLBin abuse. The attacker used a two-stage malware approach and obfuscated script techniques to deploy AsyncRat.
+
+[View Full Write-Up with Screenshots](https://share.note.sx/dc2u9kfs#AH2xdLoMifLIoqlhKjEPmzmkh78ow8uoET4Zh5sDiYs)  
+
+---
+
+## Summary Table
+
+| Question                                              | Answer                                                                 |
+|-------------------------------------------------------|------------------------------------------------------------------------|
+| URL of First Stage Malware                            | `http://45.126.209.4:222/mdm.jpg`                                     |
+| Hosting Provider (via VirusTotal)                     | `ReliableSite.Net`                                                    |
+| SHA256 of Malware Executable                          | `1eb7b02e18f67420f42b1d94e74f3b6289d92672a0fb1786c30c03d68e81d798`    |
+| Malware Family (Alibaba Detection)                    | `AsyncRat`                                                            |
+| Malware Creation Timestamp                            | `2023-10-30 15:08`                                                    |
+| LOLBin Used                                           | `C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegSvcs.exe`           |
+| Files Dropped                                         | `Conted.vbs, Conted.ps1, Conted.bat`                                  |
+
+---
+
+## Tools Used
+- Wireshark
+- CyberChef
+- VirusTotal
+- Obfuscation decoding techniques
+
+---
+
+## Notes
+- Hex decoding in CyberChef helped extract the SHA256 hash
+- Obfuscated PowerShell/LOLBin path rebuilt using pattern analysis
+- AsyncRat identified via sandbox reports and network behavior
+- VirusTotal and DNS/WHOIS tools used to enrich IOCs
+
+---
+
+**Tags:** `#PCAP #MalwareAnalysis #AsyncRAT #CyberDefenders #BlueTeam #Wireshark #CyberChef #LOLBin`
