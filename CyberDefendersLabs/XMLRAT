@@ -1,4 +1,4 @@
-# XMLRAT 
+# XMLRAT - CyberDefenders Lab
 
 ## Overview
 A compromised host was detected generating suspicious traffic. This lab focused on dissecting a PCAP to identify the malware delivery method, understand post-compromise activity, extract hashes, and detect LOLBin abuse. The attacker used a two-stage malware approach and obfuscated script techniques to deploy AsyncRat.
