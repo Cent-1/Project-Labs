@@ -1,0 +1,50 @@
+# HoneyBot - CyberDefenders Lab
+
+## Overview
+This lab focused on analyzing an automated attack against a honeypot using SMB and FTP protocols. The attacker exploited a known CVE, dropped a malware payload, and attempted remote code execution using shellcode. Through packet analysis and static shellcode examination, you uncovered the full exploitation timeline and payload behavior.
+
+[View Full Write-Up with Screenshots](https://share.note.sx/tnl10hih#/9TqWm60ZjnH1+2Z/Ld3oJhQ1vUKzpI0hBs0GTfkLo4)  
+
+
+---
+
+## Summary Table
+
+| Question                                                   | Answer                          |
+|------------------------------------------------------------|---------------------------------|
+| Attacker's IP Address                                      | `98.114.205.102`               |
+| Target's IP Address                                        | `192.150.11.111`               |
+| Attacker Country Code                                      | `US`                           |
+| TCP Sessions Present                                       | `5`                            |
+| Total Attack Duration (seconds)                            | `16`                           |
+| CVE Exploited                                              | `CVE-2003-0533`                |
+| Protocol Used for Exploitation                             | `SMB`                          |
+| Protocol Used to Download Malware                          | `FTP`                          |
+| Name of Downloaded Malware                                 | `ssms.exe`                     |
+| Attacker’s Listening Port                                  | `8884`                         |
+| First VirusTotal Submission Date                           | `2007-06-27`                   |
+| Shellcode XOR Key                                          | `0x99`                         |
+| Shellcode Bound Port                                       | `1957`                         |
+| OS File Queried for Shellcode Execution                    | `kernel32.dll`                |
+
+---
+
+## 🛠 Tools Used
+- **Wireshark** – Protocol filtering, TCP stream analysis  
+- **NetworkMiner** – Session metadata and file reconstruction  
+- **SCDBG** – Static shellcode analysis  
+- **VirusTotal** – Threat intelligence and submission lookup  
+
+---
+
+## Notes
+- The attack exploited SMB via `DsRoleUpgradeDownLevelServer` over DCERPC
+- Malware was dropped via FTP from the attacker’s host and reconstructed in hex
+- Shellcode analysis using SCDBG revealed bound ports and use of GetProcAddress
+- XOR key `0x99` was used to encode the shellcode payload
+- Malware identified as `ssms.exe` and tied to CVE-2003-0533 exploitation
+
+
+---
+
+**Tags:** `#CyberDefenders #PCAP #SMB #FTP #CVE2003-0533 #SCDBG #Wireshark #MalwareAnalysis #BlueTeam`
