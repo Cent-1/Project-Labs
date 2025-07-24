@@ -1,0 +1,40 @@
+# DanaBot - CyberDefenders Lab
+
+## Overview
+This investigation involved a malware infection traced through packet capture (PCAP) analysis and open-source threat intelligence. You analyzed how the attacker initially accessed the network, the malware payloads used (including a JavaScript dropper and DLL file), and how they were executed.
+
+[View Full Write-Up with Screenshots](https://share.note.sx/r35i66he#VojSTg32Xff387IRj5tuw5VbXKvPTgWftGW4kz4zFmg)  
+> If the link isn't clickable, copy and paste:  
+> `https://share.note.sx/r35i66he#VojSTg32Xff387IRj5tuw5VbXKvPTgWftGW4kz4zFmg`
+
+---
+
+## Summary Table
+
+| Question                                                       | Answer                                                             |
+|----------------------------------------------------------------|--------------------------------------------------------------------|
+| Attacker's IP (used for initial access)                        | `62.173.142.148`                                                  |
+| Malicious file used for initial access                         | `allegato_708.js`                                                 |
+| SHA-256 hash of initial malicious file                         | `847b4ad90b1daba2d9117a8e05776f3f902dda593fb1252289538acf476c4268`|
+| Process used to execute the malicious JS file                  | `wscript.exe`                                                     |
+| File extension of second-stage malware                         | `.dll`                                                            |
+| MD5 hash of the second malicious file                          | `e758e07113016aca55d9eda2b0ffeebe`                                |
+
+---
+
+##  Tools Used
+- **Wireshark** – HTTP stream tracking  
+- **Any.Run** – Behavioral malware analysis, hash lookup  
+- **VirusTotal** – Additional reputation checks  
+
+---
+
+## Notes
+- Initial access was established through a malicious JavaScript file (`allegato_708.js`) delivered via HTTP.
+- Execution was triggered using `wscript.exe`, a known vector for script-based malware.
+- A DLL named `Resources.dll` was used as the second-stage payload, indicating modular malware behavior.
+- Hashes were verified using Any.Run sandbox report.
+
+---
+
+**Tags:** `#CyberDefenders #DanaBot #MalwareAnalysis #PCAP #wscript #JavaScriptMalware #DLL #AnyRun #Wireshark #BlueTeam`
