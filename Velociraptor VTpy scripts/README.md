@@ -1,3 +1,6 @@
+These scripts are used to scan hash files found within velociraptor hunts with VT-py.
+
+
 V1:  scans all the hashes in the file and gives all the data virus total has on the hash. The information given is redundant, I want to only report malicious or suspicious flagged hashes.
 
 
