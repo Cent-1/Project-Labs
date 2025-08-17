@@ -1,1 +1,3 @@
-
+V1:  scans all the hashes in the file and gives all the data virus total has on the hash. The information given is redundant, I want to only report malicious or suspicious flagged hashes.
+V2: This iteration was supposed to only output malicious or suspicious flagged hashes and write them to a report file. However, when I added more malicious hashes to test it, invalid hashes caused it to crash and fail.
+V3: This is a fixed version of iteration 2, I added a try and except clause so it would iterate over hashes with errors. It only reports malicious and suspicious hashes and shows what hashes weren't able to be scanned.
