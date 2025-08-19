@@ -30,17 +30,3 @@ As a tier-2 SOC analyst, you investigated suspicious outbound connections from a
 
 ---
 
-## Notes
-- Tracked HTTP/TCP streams to trace download activity
-- Used packet payload analysis to extract Java exploit behavior
-- Verified CVE impact and mitigation via vendor patch analysis
-
----
-
-## What I Learned
-
-> This lab introduced me to **stream following in Wireshark**, especially HTTP and TCP flows. It gave me a stronger understanding of how different packets are connected and how malicious behaviors manifest in traffic patterns.
-
----
-
-**Tags:** `#PCAP #Wireshark #ApacheActiveMQ #CVE2023-46604 #CyberDefenders #BlueTeam`
