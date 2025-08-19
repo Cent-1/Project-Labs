@@ -7,7 +7,7 @@ This lab involved analyzing a PCAP file related to suspicious SMB activity from 
 
 ---
 
-## ✅ Summary Table
+##  Summary Table
 
 | Question                                                          | Answer                  |
 |-------------------------------------------------------------------|-------------------------|
@@ -26,15 +26,4 @@ This lab involved analyzing a PCAP file related to suspicious SMB activity from 
 - Wireshark 
 - Manual packet inspection
 
-
 ---
-
-## Notes
-- SMB Create Request packets helped uncover accessed files and execution behavior
-- Named pipes and RPC traffic revealed lateral movement
-- Time analysis confirmed log tampering and session duration
-
-
----
-
-**Tags:** `#PCAP #SMB #Wireshark #CyberDefenders #PsExec #BlueTeam`
