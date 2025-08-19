@@ -27,11 +27,4 @@ An IDS alert flagged suspicious lateral movement involving PsExec. This lab invo
 
 ---
 
-## Notes
-- Detected PsExec behavior via service creation and SMB file transfers
-- Hostnames extracted by following TCP auth streams
-- ADMIN$ and IPC$ shares confirmed typical PsExec lateral movement patterns
 
----
-
-**Tags:** `#PsExec #LateralMovement #PCAP #CyberDefenders #BlueTeam #SMB #Wireshark`
