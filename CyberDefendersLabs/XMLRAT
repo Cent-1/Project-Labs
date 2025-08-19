@@ -25,16 +25,5 @@ A compromised host was detected generating suspicious traffic. This lab focused 
 - Wireshark
 - CyberChef
 - VirusTotal
-- Obfuscation decoding techniques
-
 ---
 
-## Notes
-- Hex decoding in CyberChef helped extract the SHA256 hash
-- Obfuscated PowerShell/LOLBin path rebuilt using pattern analysis
-- AsyncRat identified via sandbox reports and network behavior
-- VirusTotal and DNS/WHOIS tools used to enrich IOCs
-
----
-
-**Tags:** `#PCAP #MalwareAnalysis #AsyncRAT #CyberDefenders #BlueTeam #Wireshark #CyberChef #LOLBin`
