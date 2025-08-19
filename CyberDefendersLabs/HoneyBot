@@ -37,14 +37,4 @@ This lab focused on analyzing an automated attack against a honeypot using SMB a
 
 ---
 
-## Notes
-- The attack exploited SMB via `DsRoleUpgradeDownLevelServer` over DCERPC
-- Malware was dropped via FTP from the attacker’s host and reconstructed in hex
-- Shellcode analysis using SCDBG revealed bound ports and use of GetProcAddress
-- XOR key `0x99` was used to encode the shellcode payload
-- Malware identified as `ssms.exe` and tied to CVE-2003-0533 exploitation
 
-
----
-
-**Tags:** `#CyberDefenders #PCAP #SMB #FTP #CVE2003-0533 #SCDBG #Wireshark #MalwareAnalysis #BlueTeam`
