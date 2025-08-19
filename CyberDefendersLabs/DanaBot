@@ -4,8 +4,6 @@
 This investigation involved a malware infection traced through packet capture (PCAP) analysis and open-source threat intelligence. You analyzed how the attacker initially accessed the network, the malware payloads used (including a JavaScript dropper and DLL file), and how they were executed.
 
 [View Full Write-Up with Screenshots](https://share.note.sx/r35i66he#VojSTg32Xff387IRj5tuw5VbXKvPTgWftGW4kz4zFmg)  
-> If the link isn't clickable, copy and paste:  
-> `https://share.note.sx/r35i66he#VojSTg32Xff387IRj5tuw5VbXKvPTgWftGW4kz4zFmg`
 
 ---
 
@@ -29,12 +27,3 @@ This investigation involved a malware infection traced through packet capture (P
 
 ---
 
-## Notes
-- Initial access was established through a malicious JavaScript file (`allegato_708.js`) delivered via HTTP.
-- Execution was triggered using `wscript.exe`, a known vector for script-based malware.
-- A DLL named `Resources.dll` was used as the second-stage payload, indicating modular malware behavior.
-- Hashes were verified using Any.Run sandbox report.
-
----
-
-**Tags:** `#CyberDefenders #DanaBot #MalwareAnalysis #PCAP #wscript #JavaScriptMalware #DLL #AnyRun #Wireshark #BlueTeam`
