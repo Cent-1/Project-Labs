@@ -30,12 +30,3 @@ This lab involved analyzing web server traffic to investigate a SQL injection at
 - IP Geolocation Tools
 
 ---
-
-## Notes
-- SQL injection activity detected through `search.php` URI manipulation
-- POST packets and stream inspection revealed credentials and web shell upload
-- HTTP filters like `http contains "INFORMATION_SCHEMA"` and `http contains "bookworld_db"` helped isolate key traffic
-
----
-
-**Tags:** `#PCAP #WebForensics #SQLInjection #CyberDefenders #Wireshark #BlueTeam`
