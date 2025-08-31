@@ -1,0 +1,26 @@
+# Piggy – Wireshark PCAP Analysis
+
+## Overview  
+This lab focused on analyzing multiple PCAP files in Wireshark to investigate suspicious network activity. The investigation involved identifying malicious communications, performing OSINT lookups on IPs, and mapping findings to MITRE ATT&CK techniques. Key skills included network traffic analysis, malware attribution, and correlating indicators with external threat intelligence.
+
+## Full Write-Up  
+[Full Walkthrough Notes](https://share.note.sx/klou6q2k#cGl+2viF0KtQYbqN4k6G+iFVVO3iUPWR1c9FDIO3fKM)
+
+## Summary Table  
+
+| PCAP | Question | Answer |
+|------|-----------|--------|
+| One  | Remote IP address used to transfer data over SSH | **35.211.33.16** |
+| One  | Total data transferred | **1131** |
+| Two  | Malware family tied to infrastructure | **TrickBot** |
+| Three | ASN numbers for two unusual IPs | **67949, 14061** |
+| Three | Malware category historically attributed | **Miner** |
+| Three | ATT&CK Technique | **T1496 – Resource Hijacking** |
+| Four  | Time of first TXT record query (seconds) | **8.527712** |
+| Four  | Date & timestamp of TXT query | **2024-05-24 10:08:50** |
+| Four  | ATT&CK Subtechnique | **T1071.004 – Application Layer Protocol: DNS** |
+
+## Tools Used  
+- Wireshark  
+- VirusTotal (OSINT lookups)  
+
