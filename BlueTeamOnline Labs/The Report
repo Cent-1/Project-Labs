@@ -1,0 +1,26 @@
+# BTLO – Threat Report
+
+## Overview  
+This challenge focused on reviewing a 2022 threat report and extracting key takeaways relevant to SOC operations. The investigation covered vulnerabilities, adversary techniques, ransomware trends, and mitigations. The goal was to strengthen SOC readiness against common attack vectors like supply chain compromises, exploitation of outdated software, and affiliate ransomware models.
+
+## Full Write-Up  
+[Full Walkthrough Notes](https://share.note.sx/lf0l6ahj#opVFcqbpfwvZ7khcIUFGBODx2E+Y+2F8dppmhlFDLUc)
+
+## Summary Table  
+
+| Question | Answer |
+|----------|--------|
+| Supply chain attack related to Java logging library (end of 2021) | **Log4j** |
+| MITRE Technique ID affecting 50%+ customers | **T1059 – Command and Scripting Interpreter** |
+| Two Exchange Server vulnerabilities | **ProxyLogon, ProxyShell** |
+| CVE of zero-day driver vulnerability leading to SYSTEM RCE | **CVE-2021-34527** |
+| Two adversary groups using SEO for initial access | **Gootkit, Yellow Cockatoo** |
+| Parent process for execution of malicious JS (not CMD) | **wscript.exe** |
+| Precursors used by Conti ransomware affiliates | **Qbot, Bazar, IcedID** |
+| Two outdated software targeted by coin miners | **JBoss, WebLogic** |
+| Ransomware group threatening DDoS for non-payment | **Fancy Lazarus** |
+| Security measure to enable for RDP to protect against ransomware | **MFA** |
+
+## Tools Used  
+- Threat Report (2022)  
+- MITRE ATT&CK Framework  
